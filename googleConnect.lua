@@ -14,11 +14,12 @@ local credentials
 local connectCallback
 
 local options = {}
---options.client_id = "your-client-id"
---options.client_secret = "your-client-secret"
+options.client_id = "your-client-id"
+options.client_secret = "your-client-secret"
+options.scope = "https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile" -- Set your desired scopes. More info at https://developers.google.com/accounts/docs/OAuth2Login#scopeparameter
 options.response_type = "code"
 options.redirect_uri = "http://localhost:9004"
-options.scope = "https://www.googleapis.com/auth/userinfo.email+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/drive"
+
 g = {}
 
 -- Opens a webpopup so user can login at google and authorize app. Starts internal TCP server to listen to Google's redirect
