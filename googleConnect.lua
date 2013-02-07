@@ -7,7 +7,6 @@
 
 module(...,package.seeall)
 local socket = require("socket")
-local inspect = require("inspect")
 local json = require("json")
 local credentials
 local connectCallback
